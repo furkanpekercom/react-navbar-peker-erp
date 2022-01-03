@@ -1,0 +1,156 @@
+*{
+  font-family: 'Raleway', sans-serif;
+}
+.navbar {
+  /* background: linear-gradient(90deg, #48cbff 0%, #48cbff 50%,#48cbff 100%); */
+  background: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+  border: 2px dotted #222d32;
+  margin: 5px;
+
+}
+
+.navbar-logo {
+  color: #222d32;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.fa-firstdraft {
+  margin-left: 0.5rem;
+  font-size: 1.1em;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(16, auto);
+  grid-gap: 0px;
+  list-style: none;
+  text-align: center;
+  width: 75vw;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.nav-links {
+  color: #222d32;
+  text-decoration: none;
+  padding: 0.2rem 0.8rem;
+}
+
+.nav-links:hover {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px outset rgb(216, 216, 216);
+  transition: all 0.5s ease;
+}
+
+.fa-bars {
+  color: rgb(126, 126, 126);
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #1888ff;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #1888ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #1888ff;
+    transition: 250ms;
+  }
+
+  button {
+    display: none;
+  }
+}
